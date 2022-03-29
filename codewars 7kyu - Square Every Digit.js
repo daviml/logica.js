@@ -1,13 +1,24 @@
 function squareDigits(dig)
 {
-    parseInt()
+    
+    dig = dig.toString().split("")
 
-    dig.toString().split("")
+    let arr = []
 
-    let n = []
-    n.push(1)
-    n.push(2)
+    for(i=0;i<dig.length;i++)
+    {
+        arr.push(parseInt(dig[i]*dig[i]))
+    }
+
+    arr = arr.toString()
+
+    for(i=0;i<dig.length;i++)
+    {
+        arr = arr.replace(",","");
+    }
+
+    return(parseInt(arr))
 
 }
 
-squareDigits(1234)
+squareDigits(3212)
